@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nextrap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../dist/css/nexstrap.css">
+    <style>
+        body { background: var(--bg-main); }
+        .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1015; }
+        .sidebar-overlay.show { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar-custom">
+        <button class="btn btn-ghost d-lg-none" data-sidebar-toggle>
+            <i class="bi bi-list fs-4"></i>
+        </button>
+        <a class="navbar-brand" href="#">
+            <span class="navbar-brand-icon">N</span>
+            Nextrap
+        </a>
+        <div class="navbar-menu">
+            <a href="#" class="navbar-item active">Dashboard</a>
+            <a href="#" class="navbar-item">Projetos</a>
+            <a href="#" class="navbar-item">Relatórios</a>
+            <a href="#" class="navbar-item">Configurações</a>
+        </div>
+        <div class="navbar-actions">
+            <div class="search-input-wrapper d-none d-md-block">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Buscar...">
+            </div>
+            <button class="btn btn-icon btn-ghost">
+                <i class="bi bi-bell"></i>
+            </button>
+            <div class="user-menu">
+                <div class="user-avatar">JD</div>
+                <div class="user-info d-none d-lg-block">
+                    <div class="user-name">João Doe</div>
+                    <div class="user-role">Administrador</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Menu</div>
+                <a href="#" class="sidebar-item active">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="bi bi-folder"></i>
+                    <span>Projetos</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="bi bi-people"></i>
+                    <span>Equipe</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>Relatórios</span>
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Sistema</div>
+                <a href="#" class="sidebar-item">
+                    <i class="bi bi-gear"></i>
+                    <span>Configurações</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Ajuda</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <div class="sidebar-overlay" data-sidebar-overlay></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container-custom">
+            <!-- Page Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="page-title">Dashboard</h1>
+                    <p class="page-subtitle">Bem-vindo de volta, João!</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-download"></i>
+                        Exportar
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-plus-lg"></i>
+                        Novo Projeto
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="stat-label">Total de Vendas</div>
+                                <div class="stat-value">R$ 45.678</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    12% vs último mês
+                                </div>
+                            </div>
+                            <div class="stat-icon primary">
+                                <i class="bi bi-cart-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="stat-label">Novos Clientes</div>
+                                <div class="stat-value">234</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    8% vs último mês
+                                </div>
+                            </div>
+                            <div class="stat-icon success">
+                                <i class="bi bi-people"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="stat-label">Pedidos Pendentes</div>
+                                <div class="stat-value">23</div>
+                                <div class="stat-trend down">
+                                    <i class="bi bi-arrow-down"></i>
+                                    5% vs último mês
+                                </div>
+                            </div>
+                            <div class="stat-icon warning">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="stat-card">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="stat-label">Receita Média</div>
+                                <div class="stat-value">R$ 1.234</div>
+                                <div class="stat-trend up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    3% vs último mês
+                                </div>
+                            </div>
+                            <div class="stat-icon info">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row g-4">
+                <!-- Recent Projects -->
+                <div class="col-12 col-lg-8">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Projetos Recentes</h5>
+                            <a href="#" class="btn btn-sm btn-ghost">Ver todos</a>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Projeto</th>
+                                            <th>Status</th>
+                                            <th>Progresso</th>
+                                            <th>Prazo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar avatar-sm bg-primary-light text-primary">W</div>
+                                                    <div>
+                                                        <div class="fw-semibold">Website Corporativo</div>
+                                                        <small class="text-muted">Empresa XYZ</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-success">Em Andamento</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="progress" style="width: 80px; height: 6px;">
+                                                        <div class="progress-bar" style="width: 65%;"></div>
+                                                    </div>
+                                                    <small>65%</small>
+                                                </div>
+                                            </td>
+                                            <td>15 Mar 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar avatar-sm bg-warning-light text-warning">A</div>
+                                                    <div>
+                                                        <div class="fw-semibold">App Mobile</div>
+                                                        <small class="text-muted">Startup ABC</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-warning">Em Revisão</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="progress" style="width: 80px; height: 6px;">
+                                                        <div class="progress-bar" style="width: 90%;"></div>
+                                                    </div>
+                                                    <small>90%</small>
+                                                </div>
+                                            </td>
+                                            <td>20 Mar 2024</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar avatar-sm bg-info-light text-info">S</div>
+                                                    <div>
+                                                        <div class="fw-semibold">Sistema ERP</div>
+                                                        <small class="text-muted">Indústria 123</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-primary">Planejamento</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="progress" style="width: 80px; height: 6px;">
+                                                        <div class="progress-bar" style="width: 15%;"></div>
+                                                    </div>
+                                                    <small>15%</small>
+                                                </div>
+                                            </td>
+                                            <td>01 Abr 2024</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="col-12 col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Acesso Rápido</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <a href="#" class="quick-access-card">
+                                    <div class="quick-access-icon bg-primary-light">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </div>
+                                    <div>
+                                        <div class="quick-access-title">Novo Projeto</div>
+                                        <small class="quick-access-desc">Criar um novo projeto</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="quick-access-card">
+                                    <div class="quick-access-icon bg-success-light">
+                                        <i class="bi bi-person-plus"></i>
+                                    </div>
+                                    <div>
+                                        <div class="quick-access-title">Adicionar Membro</div>
+                                        <small class="quick-access-desc">Convidar para equipe</small>
+                                    </div>
+                                </a>
+                                <a href="#" class="quick-access-card">
+                                    <div class="quick-access-icon bg-warning-light">
+                                        <i class="bi bi-file-earmark-plus"></i>
+                                    </div>
+                                    <div>
+                                        <div class="quick-access-title">Novo Relatório</div>
+                                        <small class="quick-access-desc">Gerar relatório</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Atividade Recente</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-item">
+                                <div class="activity-icon bg-primary-light text-primary">
+                                    <i class="bi bi-check-lg"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Maria</strong> completou a tarefa "Design Homepage"
+                                    </div>
+                                    <div class="activity-time">Há 5 minutos</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-success-light text-success">
+                                    <i class="bi bi-plus-lg"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Carlos</strong> criou novo projeto "App Delivery"
+                                    </div>
+                                    <div class="activity-time">Há 1 hora</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon bg-warning-light text-warning">
+                                    <i class="bi bi-pencil"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-text">
+                                        <strong>Ana</strong> atualizou "Especificações Técnicas"
+                                    </div>
+                                    <div class="activity-time">Há 3 horas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2024 Nextrap. Todos os direitos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/nexstrap.js"></script>
+</body>
+</html>

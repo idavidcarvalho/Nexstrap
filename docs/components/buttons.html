@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões - Nextrap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../dist/css/nexstrap.css">
+    <link rel="stylesheet" href="../assets/css/docs.css">
+</head>
+<body>
+    <header class="docs-header">
+        <a href="../index.html" class="docs-brand">
+            <span class="docs-brand-icon">N</span>
+            Nexstrap
+        </a>
+        <nav class="docs-nav">
+            <a href="../getting-started/introduction.html" class="docs-nav-link">Documentação</a>
+            <a href="buttons.html" class="docs-nav-link active">Componentes</a>
+            <a href="https://github.com/idavidcarvalho/Nexstrap" target="_blank" class="docs-nav-link">GitHub</a>
+        </nav>
+        <div class="docs-header-actions">
+            <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema">
+                <i class="bi bi-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <aside class="docs-sidebar" id="sidebar">
+        <div class="docs-sidebar-section">
+            <div class="docs-sidebar-title">Getting Started</div>
+            <ul class="docs-sidebar-nav">
+                <li><a href="../getting-started/introduction.html" class="docs-sidebar-link">Introdução</a></li>
+                <li><a href="../getting-started/installation.html" class="docs-sidebar-link">Instalação</a></li>
+            </ul>
+        </div>
+        <div class="docs-sidebar-section">
+            <div class="docs-sidebar-title">Components</div>
+            <ul class="docs-sidebar-nav">
+                <li><a href="buttons.html" class="docs-sidebar-link active">Botões</a></li>
+                <li><a href="cards.html" class="docs-sidebar-link">Cards</a></li>
+                <li><a href="navbar.html" class="docs-sidebar-link">Navbar</a></li>
+                <li><a href="sidebar.html" class="docs-sidebar-link">Sidebar</a></li>
+                <li><a href="modals.html" class="docs-sidebar-link">Modais</a></li>
+                <li><a href="alerts.html" class="docs-sidebar-link">Alertas</a></li>
+                <li><a href="tabs.html" class="docs-sidebar-link">Tabs</a></li>
+                <li><a href="dropdowns.html" class="docs-sidebar-link">Dropdowns</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="docs-main">
+        <div class="docs-content">
+            <h1 class="docs-title">Botões</h1>
+            <p class="docs-subtitle">Botões customizados com múltiplos estilos, tamanhos e estados.</p>
+
+            <section class="docs-section">
+                <h2 class="docs-section-title">Exemplo Básico</h2>
+                <p class="docs-section-description">
+                    Use qualquer um dos estilos de botões disponíveis.
+                </p>
+                
+                <div class="docs-example">
+                    <div class="docs-example-body">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-success">Success</button>
+                           btn btn-danger">Danger</button>
+                            <button class <button class="="btn btn-warning">Warning</button>
+                            <button class="btn btn-info">Info</button>
+                            <button class="btn btn-light">Light</button>
+                            <button class="btn btn-dark">Dark</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="docs-code">
+                    <div class="docs-code-header">
+                        <span class="docs-code-lang">HTML</span>
+                        <button class="docs-code-copy" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 class="docs-section-title">Botões com Ícones</h2>
+                <p class="docs-section-description">
+                    Botões com ícones usando Bootstrap Icons.
+                </p>
+                
+                <div class="docs-example">
+                    <div class="docs-example-body">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-primary">
+                                <i class="bi bi-plus-lg"></i>
+                                Adicionar
+                            </button>
+                            <button class="btn btn-success">
+                                <i class="bi bi-check-lg"></i>
+                                Confirmar
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="bi bi-trash"></i>
+                                Excluir
+                            </button>
+                            <button class="btn btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                                Editar
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i>
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="docs-code">
+                    <div class="docs-code-header">
+                        <span class="docs-code-lang">HTML</span>
+                        <button class="docs-code-copy" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code>&lt;button class="btn btn-primary"&gt;
+    &lt;i class="bi bi-plus-lg"&gt;&lt;/i&gt;
+    Adicionar
+&lt;/button&gt;
+
+&lt;button class="btn btn-success"&gt;
+    &lt;i class="bi bi-check-lg"&gt;&lt;/i&gt;
+    Confirmar
+&lt;/button&gt;
+
+&lt;button class="btn btn-danger"&gt;
+    &lt;i class="bi bi-trash"&gt;&lt;/i&gt;
+    Excluir
+&lt;/button&gt;
+
+&lt;button class="btn btn-outline-primary"&gt;
+    &lt;i class="bi bi-pencil"&gt;&lt;/i&gt;
+    Editar
+&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 class="docs-section-title">Grupo de Botões</h2>
+                <p class="docs-section-description">
+                    Agrupe botões emtoolbar ou grupos.
+                </p>
+                
+                <div class="docs-example">
+                    <div class="docs-example-body">
+                        <div class="d-flex gap-3 flex-wrap align-items-start">
+                            <div>
+                                <strong>Toolbar</strong>
+                                <div class="btn-toolbar mt-2" role="toolbar">
+                                    <div class="btn-group me-2" role="group">
+                                        <button class="btn btn-secondary"><i class="bi bi-format-bold"></i></button>
+                                        <button class="btn btn-secondary"><i class="bi bi-type-italic"></i></button>
+                                        <button class="btn btn-secondary"><i class="bi bi-type-underline"></i></button>
+                                    </div>
+                                    <div class="btn-group me-2" role="group">
+                                        <button class="btn btn-secondary"><i class="bi bi-text-left"></i></button>
+                                        <button class="btn btn-secondary"><i class="bi bi-text-center"></i></button>
+                                        <button class="btn btn-secondary"><i class="bi bi-text-right"></i></button>
+                                    </div>
+                                    <div class="btn-group" role="group">
+                                        <button class="btn btn-primary"><i class="bi bi-save"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <strong>Group</strong>
+                                <div class="btn-group mt-2" role="group">
+                                    <button class="btn btn-outline-primary">Esquerda</button>
+                                    <button class="btn btn-outline-primary active">Centro</button>
+                                    <button class="btn btn-outline-primary">Direita</button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <strong>Vertical</strong>
+                                <div class="btn-group-vertical mt-2" role="group">
+                                    <button class="btn btn-secondary"><i class="bi bi-house"></i></button>
+                                    <button class="btn btn-secondary"><i class="bi bi-person"></i></button>
+                                    <button class="btn btn-secondary"><i class="bi bi-gear"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="docs-code">
+                    <div class="docs-code-header">
+                        <span class="docs-code-lang">HTML</span>
+                        <button class="docs-code-copy" onclick="copyCode(this)">Copy</button>
+                    </div>
+                    <pre><code>&lt;!-- Toolbar --&gt;
+&lt;div class="btn-toolbar" role="toolbar"&gt;
+    &lt;div class="btn-group me-2" role="group"&gt;
+        &lt;button class="btn btn-secondary"&gt;&lt;i class="bi bi-format-bold"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button class="btn btn-secondary"&gt;&lt;i class="bi bi-type-italic"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="btn-group" role="group"&gt;
+        &lt;button class="btn btn-primary"&gt;&lt;i class="bi bi-save"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Group --&gt;
+&lt;div class="btn-group" role="group"&gt;
+    &lt;button class="btn btn-outline-primary"&gt;Esquerda&lt;/button&gt;
+    &lt;button class="btn btn-outline-primary active"&gt;Centro&lt;/button&gt;
+    &lt;button class="btn btn-outline-primary"&gt;Direita&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Vertical --&gt;
+&lt;div class="btn-group-vertical" role="group"&gt;
+    &lt;button class="btn btn-secondary"&gt;&lt;i class="bi bi-house"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;&lt;i class="bi bi-person"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;&lt;i class="bi bi-gear"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 class="docs-section-title">Tamanhos</h2>
+                <p class="docs-section-description">
+                    Três tamanhos disponíveis: small, default e large.
+                </p>
+                
+                <div class="docs-example">
+                    <div class="docs-example-body">
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <button class="btn btn-sm btn-primary">Small</button>
+                            <button class="btn btn-primary">Default</button>
+                            <button class="btn btn-lg btn-primary">Large</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 class="docs-section-title">Estados</h2>
+                <p class="docs-section-description">
+                    Botões com diferentes estados.
+                </p>
+                
+                <div class="docs-example">
+                    <div class="docs-example-body">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-primary" disabled>Disabled</button>
+                            <button class="btn btn-outline-primary" disabled>Disabled Outline</button>
+                            <button class="btn btn-primary" data-bs-toggle="button">Toggle</button>
+                            <button class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="docs-footer">
+        <div class="docs-footer-content">
+            <p class="docs-footer-text">Nextrap v1.0.0 - MIT License</p>
+            <ul class="docs-footer-links">
+                <li><a href="https://github.com/idavidcarvalho/Nexstrap">GitHub</a></li>
+                <li><a href="https://github.com/idavidcarvalho/Nexstrap/blob/main/LICENSE">MIT License</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../dist/js/nexstrap.js"></script>
+    <script>
+        function copyCode(button) {
+            const code = button.closest('.docs-code').querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copied!';
+                setTimeout(() => button.textContent = 'Copy', 2000);
+            });
+        }
+        
+        const themeToggle = document.querySelector('[data-theme-toggle]');
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            themeToggle.innerHTML = next === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+        });
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+        }
+    </script>
+</body>
+</html>
